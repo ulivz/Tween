@@ -3,7 +3,7 @@
   "sideEffects": false,
   "version": "0.0.1",
   "description": "A tiny javascript tweening animation engine",
-  "main": "dist/tween.cjs.js",
+  "main": "dist/tweense.cjs.js",
   "files": [
     "dist"
   ],
