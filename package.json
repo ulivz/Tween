@@ -1,5 +1,6 @@
 {
   "name": "tweense",
+  "sideEffects": false,
   "version": "0.0.0",
   "description": "A tiny javascript tweening animation engine",
   "main": "dist/tween.cjs.js",
@@ -12,13 +13,14 @@
     "prepublishOnly": "npm run build",
     "build": "bili --format cjs,umd,umd-min --module-name Tweenx",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "conventional-changelog-cli": "^2.0.1"
   },
   "repository": {
     "url": "ulivz/Tween",
     "type": "git"
   },
-  "author": "ulivz<chl814@foxmail.com>",
+  "author": "ULIVZ <chl814@foxmail.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

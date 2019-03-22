@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm i tweenimate -s
+npm i tweense -s
 ```
 
 ## Usage
