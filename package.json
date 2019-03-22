@@ -11,7 +11,7 @@
     "test": "npm run lint && jest",
     "lint": "xo",
     "prepublishOnly": "npm run build",
-    "build": "bili --format cjs,umd,umd-min --module-name Tweenx",
+    "build": "bili --format cjs,umd,umd-min --module-name TweenSE",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "conventional-changelog-cli": "^2.0.1"
