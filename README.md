@@ -1,32 +1,45 @@
-Tween.js
-================
+# TweenSE
 
-简介
-----------------
+> A tiny javascript tweening animation engine.
 
-各类缓动算法，效果演示参见：http://www.zhangxinxu.com/study/201612/how-to-use-tween-js.html
+[![NPM version](https://badgen.net/npm/v/Tween)](https://npmjs.com/package/Tween) [![NPM downloads](https://badgen.net/npm/dm/Tween)](https://npmjs.com/package/Tween) [![CircleCI](https://badgen.net/circleci/github/ulivz/Tween/master)](https://circleci.com/gh/ulivz/Tween/tree/master) 
 
-如何使用参见：http://www.zhangxinxu.com/wordpress/?p=5828
+## Install
 
-其中animation.js是新增，为了更简单的使用这些缓动算法，语法如下：
+```bash
+npm i tweenimate -s
+```
 
-<pre>Math.animation(form, to, duration, easing, callback);</pre>
+## Usage
 
-其中：
-<ul>
-	<li><code>form</code>和<code>to</code>是必须参数，表示动画起始数值和结束数值；</li>
-	<li><code>duration</code>，<code>easing</code>，<code>callback</code>理论上都是可选参数，但是实际上<code>callback</code>肯定是要使用的，因为实时变化的数值就是通过<code>callback</code>返回的。然后，<code>duration</code>，<code>easing</code>，<code>callback</code>这3个参数的顺序是任意的。具体来讲：
-<ul>
-	<li><code>duration</code>为动画持续时间，默认<code>300</code>，默认单位是毫秒，建议使用数值，例如<code>600</code>，也支持带单位，例如<code>600ms</code>或者<code>0.6s</code>；</li>
-	<li><code>easing</code>为缓动的类型，字符串类型，源自Tween.js。例如：<code>'Linear'</code>，<code>'Quad.easeIn'</code>，<code>'Bounce.easeInOut'</code>等等，需要注意大小写。 其中，默认值是<code>'Linear'</code>；</li>
-	<li><code>callback</code>为回调函数，支持2个参数（value, isEnding），其中<code>value</code>表示实时变化的计算值，<code>isEnding</code>是布尔值，表示动画是否完全停止。</li>
-</ul>
-</li>
-</ul>
+```js
+const { animate } = require('tweense')
 
-<code>Math.animation</code>返回一个函数，执行这个函数可以返回当前动画使用的请求动画帧，使用<code>cancelAnimationFrame</code>方法可以停止我们的动画。
+animate(
+  0, 
+  1,
+  1000,
+  'Quad.easeIn',
+  (value, isEnding) => {
+    if(!isEnding){
+      arc.render(value)
+    }
+  }
+)
+```
 
-例如：
-<pre>var fnReq = Math.animation(100, 200, 3000);
-// 执行下面语句停止动画
-cancelAnimationFrame(fnReq());</pre>
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+
+## Author
+
+**Tween** © [ULIVZ](https://github.com/ulivz), Released under the [MIT](LICENSE) License.<br>
+Authored and maintained by ULIVZ with help from contributors ([list](https://github.com/ulivz/Tween/contributors)).
+
+> [github.com/ulivz](https://github.com/ulivz) · GitHub [@ULIVZ](https://github.com/ulivz) · Twitter [@_ulivz](https://twitter.com/_ulivz)
